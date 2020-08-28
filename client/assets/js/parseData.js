@@ -1,4 +1,4 @@
-// populate each singlePackage (object) info as an element in packageList
+// parse each package from list to relevant information
 export const parseData = (data) => {
   let packageList = [];
 
@@ -19,6 +19,7 @@ export const parseData = (data) => {
   return packageList;
 };
 
+// sort the packagae by name
 const sortByName = (arr) => {
   return arr.sort((item1, item2) => {
     // 0 i.e. if the name is same then the items are not sorted and kept in original place
@@ -86,6 +87,8 @@ const parsePackageInfo = (singlePackage) => {
     return null;
   }
 };
+
+// N.B. :: Since, package is reserved word in ES6 modules, singlePackage is used as variable name instead
 
 // add array of reverse dependencies for each singlePackage
 const addReverseDependencies = (packageList) => {

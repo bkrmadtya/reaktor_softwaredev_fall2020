@@ -1,6 +1,7 @@
 // auxiliary array of packages for diplayPackageInfo and removeOptionalDependencies functions
 let packages = [];
 
+// display system info, the list of packages and individual package info
 export const displayData = (platform, filePath, packageList) => {
   packages = [...packageList];
 
@@ -9,6 +10,7 @@ export const displayData = (platform, filePath, packageList) => {
   displayPackageList(packageList);
 };
 
+// diplay system and file info
 const displaySystemInfo = (platform, filePath, noOfPackages) => {
   const systemInfoTableBody = document.getElementById("sytem_info_table_body");
 
@@ -46,6 +48,8 @@ const displayPackageList = (packageList) => {
     })
     .join("");
 };
+
+// N.B. :: Since, package is reserved word in ES6 modules, singlePackage is used as variable name instead
 
 // display package info for a single package when its name is clicked
 // the method is called each time the a link is pressed, and it is globally available hence no identifier
@@ -112,6 +116,8 @@ const removeOptionalDependencies = (dependencies) => {
   });
 
   result = result.flat();
+
+  // N.B. :: Since, package is reserved word in ES6 modules, singlePackage is used as variable name instead
 
   // return packages that are only in the list
   return result.filter((i) =>
