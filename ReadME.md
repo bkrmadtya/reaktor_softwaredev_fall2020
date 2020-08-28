@@ -76,7 +76,7 @@ When the server gets request for the file
 - Clone the repository
 - npm install
 - Go to http://localhost:3005
-- Sample website at: https://glacial-fortress-06676.herokuapp.com
+- Sample website at: https://ancient-fjord-96706.herokuapp.com/#
 
 **NB:**
 The sample website is hosted on a linux system with heroku hence, it will show the information of the server system from its **/var/lib/dpkg/status**
